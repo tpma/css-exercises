@@ -1,3 +1,47 @@
+/*
+.header  {
+  font-family: monospace;
+  background: papayawhip;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+  margin: 10px auto;
+}
+
+ul {
+ 
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+  padding: 0px;
+  margin: 8px;
+}
+
+.left-links {
+  margin: 0px;
+}
+
+.right-links {
+  margin: 0px;
+}
+
+a {
+  font-size: 22px;
+  background: white;
+  padding: 8px;
+
+  text-decoration: none;
+}
+*/
+
 .header  {
   font-family: monospace;
   background: papayawhip;
@@ -22,4 +66,20 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+}
+
+/* SOLUTION */
+
+.header {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
 }

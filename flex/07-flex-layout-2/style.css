@@ -12,7 +12,7 @@ body {
 
 .footer {
   height: 72px;
-  background: #eee;
+  background: grey;
   color: darkmagenta;
 }
 
@@ -25,4 +25,83 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+
+/* My solution */
+/*
+- The header text is size 32px and weight 900.
+- The header text is vertically centered and 16px from the edge of the screen.
+- The footer is pushed to the bottom of the screen (the footer may go _below_ the bottom of the screen if the content of the 'cards' section overflows and/or if your screen is shorter).
+- The footer text is centered horizontally and vertically.
+- The sidebar and cards take up all available space above the footer.
+- The sidebar is 300px wide (and it doesn't shrink).
+- The sidebar links are size 24px, are white, and do not have the underline text decoration.
+- The sidebar has 16px padding.
+- There is 32px padding around the 'cards' section.
+- The cards are arranged horizontally, but wrap to multiple lines when they run out of room on the page.
+
+
+*/
+
+a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+li{
+  margin-bottom: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+.main{
+  display:flex;
+  flex: 1;
+}
+
+.sidebar{
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+.card-holder{
+  display: flex;
+  flex-direction: row;
+  padding: 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
